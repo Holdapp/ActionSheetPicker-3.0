@@ -30,6 +30,8 @@
 		1CCA90821AE0EFC500368F5E /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CCA90701AE0EFC500368F5E /* SWActionSheet.h */; };
 		906291E61B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 906291E41B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906291E71B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 906291E51B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m */; };
+		982ED3BA2158E68F0053580A /* ActionSheetMultiLineStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 982ED3B82158E68F0053580A /* ActionSheetMultiLineStringPicker.h */; };
+		982ED3BB2158E68F0053580A /* ActionSheetMultiLineStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 982ED3B92158E68F0053580A /* ActionSheetMultiLineStringPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		1CCA90701AE0EFC500368F5E /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = ../Pickers/SWActionSheet.h; sourceTree = "<group>"; };
 		906291E41B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = ../Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
 		906291E51B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = ../Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		982ED3B82158E68F0053580A /* ActionSheetMultiLineStringPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultiLineStringPicker.h; path = ../Pickers/ActionSheetMultiLineStringPicker.h; sourceTree = "<group>"; };
+		982ED3B92158E68F0053580A /* ActionSheetMultiLineStringPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultiLineStringPicker.m; path = ../Pickers/ActionSheetMultiLineStringPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				1CCA906E1AE0EFC500368F5E /* DistancePickerView.h */,
 				1CCA906F1AE0EFC500368F5E /* DistancePickerView.m */,
 				1CCA90701AE0EFC500368F5E /* SWActionSheet.h */,
+				982ED3B82158E68F0053580A /* ActionSheetMultiLineStringPicker.h */,
+				982ED3B92158E68F0053580A /* ActionSheetMultiLineStringPicker.m */,
 			);
 			name = Pickers;
 			path = ..;
@@ -185,6 +191,7 @@
 				1CCA90491AE0EFB000368F5E /* CoreActionSheetPicker.h in Headers */,
 				1CCA907D1AE0EFC500368F5E /* ActionSheetLocalePicker.h in Headers */,
 				1CCA90721AE0EFC500368F5E /* ActionSheetDistancePicker.h in Headers */,
+				982ED3BA2158E68F0053580A /* ActionSheetMultiLineStringPicker.h in Headers */,
 				1CCA90801AE0EFC500368F5E /* DistancePickerView.h in Headers */,
 				1CCA907C1AE0EFC500368F5E /* ActionSheetCustomPickerDelegate.h in Headers */,
 				1CCA907F1AE0EFC500368F5E /* ActionSheetPicker.h in Headers */,
@@ -243,6 +250,7 @@
 				TargetAttributes = {
 					1CCA90421AE0EFB000368F5E = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0940;
 					};
 					1CCA904D1AE0EFB000368F5E = {
 						CreatedOnToolsVersion = 6.3;
@@ -295,6 +303,7 @@
 				1CCA90811AE0EFC500368F5E /* DistancePickerView.m in Sources */,
 				906291E71B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m in Sources */,
 				1CCA90771AE0EFC500368F5E /* ActionSheetDatePicker.m in Sources */,
+				982ED3BB2158E68F0053580A /* ActionSheetMultiLineStringPicker.m in Sources */,
 				1CCA90711AE0EFC500368F5E /* AbstractActionSheetPicker.m in Sources */,
 				1CCA907E1AE0EFC500368F5E /* ActionSheetLocalePicker.m in Sources */,
 				1CCA90751AE0EFC500368F5E /* SWActionSheet.m in Sources */,
@@ -430,6 +439,7 @@
 		1CCA905A1AE0EFB000368F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -443,12 +453,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "SW.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1CCA905B1AE0EFB000368F5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -462,6 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "SW.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
