@@ -8,19 +8,17 @@
 
 #import "ActionSheetMultiLineStringPicker.h"
 
-@interface ()
+@interface ActionSheetMultiLineStringPicker()
 
 @property (nonatomic,strong) NSArray *data;
 @property (nonatomic,assign) NSInteger selectedIndex;
-@property (nonatomic, copy) ActionStringDoneBlock onActionSheetDone;
-@property (nonatomic, copy) ActionStringCancelBlock onActionSheetCancel;
 
 @end
 
 @implementation ActionSheetMultiLineStringPicker
 
 + (instancetype)showPickerWithTitle:(NSString *)title rows:(NSArray *)strings initialSelection:(NSInteger)index doneBlock:(ActionStringDoneBlock)doneBlock cancelBlock:(ActionStringCancelBlock)cancelBlockOrNil origin:(id)origin {
-    ActionSheetStringPicker * picker = [[ActionSheetStringPicker alloc] initWithTitle:title rows:strings initialSelection:index doneBlock:doneBlock cancelBlock:cancelBlockOrNil origin:origin];
+    ActionSheetMultiLineStringPicker * picker = [[ActionSheetMultiLineStringPicker alloc] initWithTitle:title rows:strings initialSelection:index doneBlock:doneBlock cancelBlock:cancelBlockOrNil origin:origin];
     [picker showActionSheetPicker];
     return picker;
 }
@@ -35,7 +33,7 @@
 }
 
 + (instancetype)showPickerWithTitle:(NSString *)title rows:(NSArray *)data initialSelection:(NSInteger)index target:(id)target successAction:(SEL)successAction cancelAction:(SEL)cancelActionOrNil origin:(id)origin {
-    ActionSheetStringPicker *picker = [[ActionSheetStringPicker alloc] initWithTitle:title rows:data initialSelection:index target:target successAction:successAction cancelAction:cancelActionOrNil origin:origin];
+    ActionSheetMultiLineStringPicker *picker = [[ActionSheetMultiLineStringPicker alloc] initWithTitle:title rows:data initialSelection:index target:target successAction:successAction cancelAction:cancelActionOrNil origin:origin];
     [picker showActionSheetPicker];
     return picker;
 }
